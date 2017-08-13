@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RegisterUsers</string>
+    <string name="user_title" formatted="false">%s ( %d )</string>
+</resources>
