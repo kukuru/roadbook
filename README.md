@@ -12,9 +12,9 @@
 - WeatherCast : 5장소스
 - Exercise
 연습 문제에 대한 해답은 exercise.md 파일에 기록되어 있습니다.
--- Chapter1
--- Chapter2
--- Chapter3
--- Chapter4
--- Chapter5
+* Chapter1
+* Chapter2
+* Chapter3
+* Chapter4
+* Chapter5
 
