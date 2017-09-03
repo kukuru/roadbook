@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="5dp">
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="7dp"
+        android:background="@android:drawable/ic_menu_gallery"/>
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/profile"
+        android:layout_marginTop="7dp"
+        android:text="No Name"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"/>
+    <TextView
+        android:id="@+id/tel_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/profile"
+        android:layout_below="@+id/name"
+        android:text="No TelNum"
+        android:textSize="12sp"
+        android:textColor="@android:color/secondary_text_light_nodisable"/>
+
+    <ImageButton
+        android:id="@+id/del_item"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@android:drawable/ic_delete"
+        android:onClick="onClickDelete"/>
+</RelativeLayout>

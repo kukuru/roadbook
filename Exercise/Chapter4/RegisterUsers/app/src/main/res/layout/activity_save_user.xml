@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/sel_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:clickable="true"
+            android:background="@android:drawable/ic_menu_gallery"
+            android:onClick="onClickImage"/>
+
+        <RelativeLayout
+            android:id="@+id/frame_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/sel_image">
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="이름 : "
+                android:textColor="@android:color/black"
+                android:textSize="15sp"/>
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_toRightOf="@+id/txt_name"
+                android:textSize="15dp"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/txt_age"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@+id/txt_name"
+                android:text="나이 : "
+                android:textColor="@android:color/black"
+                android:textSize="15sp"/>
+            <EditText
+                android:id="@+id/edit_age"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/edit_name"
+                android:layout_toRightOf="@+id/txt_age"
+                android:textSize="15dp"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/txt_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@+id/txt_age"
+                android:text="전화번호 : "
+                android:textColor="@android:color/black"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/edit_tel"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/edit_age"
+                android:layout_toRightOf="@+id/txt_tel"
+                android:textSize="15dp"
+                android:textColor="@android:color/black"/>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:text="추 가"
+            android:onClick="onClickSaveBtn"/>
+    </RelativeLayout>
+</LinearLayout>
