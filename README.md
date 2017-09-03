@@ -7,8 +7,8 @@
 
 ## 자료구성
 
-NationInfo : 3장소스
-RegisterUsers : 4장소스
-WeatherCast : 5장소스
-연습문제
+- NationInfo : 3장소스
+- RegisterUsers : 4장소스
+- WeatherCast : 5장소스
+- 연습문제
 
