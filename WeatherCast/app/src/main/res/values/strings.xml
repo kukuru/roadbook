@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WeatherCast</string>
+    <string name="curremt_temp">%s \u2103</string>
+    <string name="min_max_temp" formatted="false">%s \u2103 / %s \u2103</string>
+    <string name="percent">%s %%</string>
+    <string name="percent_rain">습도 : </string>
+    <string name="percent_cloudy">구름의 양 : </string>
+    <string name="speed_wind">풍속 : </string>
+</resources>
