@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity(),LoaderManager.LoaderCallbacks<ArrayList
 
     val LOADER_ID = 101010
     var adapter: WeatherListViewAdapter? = null
-    var mWeatherData: ArrayList<WeatherForecast>? = null
     val mCityArray  = ArrayList<CityData>()
     val mDb = DBHanlderAnko(this)
 
@@ -52,20 +51,23 @@ class MainActivity : AppCompatActivity(),LoaderManager.LoaderCallbacks<ArrayList
     }
 
     override fun onLoadFinished(loader: Loader<ArrayList<WeatherForecast>>?, data: ArrayList<WeatherForecast>) {
-        adapter?:let{
+        if(adapter == null){
             adapter = WeatherListViewAdapter(this, data)
-            adapter?.setDeleteClickListener(){
-                view -> val db = DBHanlderAnko(this)
-                db.deleteCity(view.tag as String)
-                adapter?.removeData(view.tag as String)
-            }
+            adapter?.setDeleteClickListener(object:View.OnClickListener{
+                override fun onClick(view:View?){
+                    val db = DBHanlderAnko(this@MainActivity)
+                    val id:String = view?.tag as String
+                    db.deleteCity(id)
+                    adapter?.removeData(id)
+                }
+            })
             weatherList.adapter = adapter
             weatherList.layoutManager = LinearLayoutManager(this)
-            mWeatherData = data
         }
-
-        mWeatherData?.addAll(data)
-        adapter?.updateData(data)
+        else{
+            adapter?.updateData(data)
+        }
+        
         progressbar.visibility = View.GONE
     }
 
