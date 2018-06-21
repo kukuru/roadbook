@@ -6,7 +6,7 @@ import java.util.*
  * Created by nanjui on 2016. 12. 17..
  */
 data class DayData(val weather: ArrayList<WeatherData>, val main: MainData, val wind: WindData,
-                   val clouds: CloudData, var cityName:String, var api_id:String)
+                   val clouds: CloudData, var name:String, var id:String)
 {
     operator fun get(poisition:Int):WeatherData = weather[poisition]
 }
