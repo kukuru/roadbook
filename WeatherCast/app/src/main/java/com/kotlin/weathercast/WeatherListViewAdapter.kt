@@ -72,12 +72,8 @@ class WeatherListViewAdapter(val context: Context, val data: ArrayList<WeatherFo
         holder?.bindHolder(context, data, delBtnClickListener)
     }
 
-    fun setDeleteClickListener(onClick: (View)->Unit){
-        delBtnClickListener = object : View.OnClickListener{
-            override fun onClick(v: View?) {
-                onClick(v)
-            }
-        }
+    fun setDeleteClickListener(l:View.OnClickListener){
+        delBtnClickListener = l;
     }
 
     fun updateData(newData: ArrayList<WeatherForecast>){
