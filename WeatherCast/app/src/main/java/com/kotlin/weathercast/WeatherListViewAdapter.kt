@@ -39,13 +39,13 @@ class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
             val format: String = context.resources.getString(R.string.min_max_temp)
             highRowTemp.text = String.format(format, data.current.main.temp_min, data.current.main.temp_max)
-            cityName.text = data.current.cityName
+            cityName.text = data.current.name
             cloudy.text = String.format(context.getString(R.string.percent), data.current.clouds.all)
             humidity.text = String.format(context.getString(R.string.percent), data.current.main.humidity)
             wind.text = data.current.wind.speed
             forecast.setView(data.week.list, data.iconUrl)
             delbtn.setOnClickListener(delClick)
-            delbtn.tag = data.current.api_id
+            delbtn.tag = data.current.id
         }
     }
 }
@@ -90,7 +90,7 @@ class WeatherListViewAdapter(val context: Context, val data: ArrayList<WeatherFo
     {
         for(i in mWeatherData)
         {
-            if(i.current.api_id.equals(api_id)) {
+            if(i.current.id == api_id) {
                 mWeatherData.remove(i)
                 break
             }
